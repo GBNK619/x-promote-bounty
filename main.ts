@@ -32,4 +32,7 @@ try {
   process.exit(1);
 }
 
+// The copy is verbatim on purpose: the house reads POST.json itself, so the
+// bytes handed in must be exactly the bytes committed in the repository.
 writeFileSync(join(OUTPUT_DIR, 'POST.json'), post);
+console.log(`POST.json copied to ${join(OUTPUT_DIR, 'POST.json')}`);
